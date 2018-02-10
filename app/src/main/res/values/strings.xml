@@ -3,4 +3,6 @@
     <string name="title_chats">Chats</string>
     <string name="title_new_chat">New Chat</string>
     <string name="title_me">Me</string>
+    <string name="button_login">Login</string>
+    <string name="button_logout">Logout</string>
 </resources>

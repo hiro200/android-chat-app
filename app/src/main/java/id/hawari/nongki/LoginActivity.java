@@ -13,9 +13,10 @@ public class LoginActivity extends AppCompatActivity {
     private View.OnClickListener onLoginButtonClick = new View.OnClickListener() {
         @Override
         public  void onClick(View view) {
-            Toast.makeText(LoginActivity.this, "Login on process", Toast.LENGTH_SHORT).show();
+            Toast.makeText(LoginActivity.this, "Login success!", Toast.LENGTH_SHORT).show();
             Log.d("Login Activity", "Login button clicked!");
 
+            // Change activity
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(intent);
         }
@@ -26,6 +27,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        // find button_login set event listener if button clicked call onLoginButtonClick method
         final Button button = findViewById(R.id.button_login);
         button.setOnClickListener(this.onLoginButtonClick);
     }
