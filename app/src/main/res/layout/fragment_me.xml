@@ -9,38 +9,37 @@
         android:id="@+id/button_logout"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="113dp"
+        android:layout_centerVertical="true"
         android:text="@string/button_logout" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/textView_name"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="98dp"
+        android:layout_marginBottom="48dp"
+        android:contentDescription="@string/sample_image_alt"
         android:src="@mipmap/ic_launcher_round" />
 
     <TextView
         android:id="@+id/textView_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView"
+        android:layout_above="@+id/textView_status"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="38dp"
-        android:textSize="24sp"
-        android:text="Fachri Hawari" />
+        android:text="@string/sample_name"
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/textView_status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textView_name"
+        android:layout_above="@+id/button_logout"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-        android:textSize="20sp"
-        android:text="Be success" />
+        android:layout_marginBottom="23dp"
+        android:text="@string/sample_status"
+        android:textSize="20sp" />
 
 </RelativeLayout>

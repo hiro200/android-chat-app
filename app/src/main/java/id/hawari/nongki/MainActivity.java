@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
                     selectedFragment = ChatsFragment.newInstance();
                     break;
                 case R.id.navigation_new_chat:
-                    getSupportActionBar().setTitle(R.string.title_new_chat);
-                    selectedFragment = NewChatFragment.newInstance();
+                    getSupportActionBar().setTitle(R.string.title_users);
+                    selectedFragment = UsersFragment.newInstance();
                     break;
                 case R.id.navigation_me:
                     getSupportActionBar().setTitle(R.string.title_me);

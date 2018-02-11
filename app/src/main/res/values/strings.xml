@@ -1,8 +1,14 @@
 <resources>
     <string name="app_name">Nongki</string>
     <string name="title_chats">Chats</string>
-    <string name="title_new_chat">New Chat</string>
+    <string name="title_users">Users</string>
     <string name="title_me">Me</string>
     <string name="button_login">Login</string>
     <string name="button_logout">Logout</string>
+    <string name="sample_name">Fachri Hawari</string>
+    <string name="sample_message">Hi, apa kabar?</string>
+    <string name="sample_time">21:32</string>
+    <string name="sample_number">1000</string>
+    <string name="sample_status">Be Success</string>
+    <string name="sample_image_alt">Alt for image</string>
 </resources>

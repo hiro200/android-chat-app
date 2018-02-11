@@ -6,10 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class NewChatFragment extends Fragment {
-    public static NewChatFragment newInstance() {
-        NewChatFragment fragment = new NewChatFragment();
-        return fragment;
+public class UsersFragment extends Fragment {
+    public static UsersFragment newInstance() {
+        return new UsersFragment();
     }
 
     @Override
@@ -20,6 +19,6 @@ public class NewChatFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_new_chat, container, false);
+        return inflater.inflate(R.layout.fragment_users, container, false);
     }
 }
