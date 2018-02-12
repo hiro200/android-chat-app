@@ -40,10 +40,10 @@ public class ChatsFragment extends Fragment {
         // Create dummy data for testing
         ArrayList<Model.Chat> dataList = new ArrayList<>();
         for (int i = 0; i < 1000; i++) {
-            dataList.add(new Model.Chat("1", "Mas Tony", "Bang fai, kapan pulang ?","09:33", 0));
-            dataList.add(new Model.Chat("2", "Abi", "Bang fai, abi udah bikin motion grafiknya lhoo!","11:21", 0));
-            dataList.add(new Model.Chat("3", "Royhan", "Boss, jagal yuk.","19:03", 1));
-            dataList.add(new Model.Chat("4", "Baehqi", "Dimana mbel, gua udah dijagal.","20:00", 0));
+            dataList.add(new Model.Chat("1",  "asdfx", "Mas Tony", "Bang fai, kapan pulang ?", "09:33", 0));
+            dataList.add(new Model.Chat("2",  "asdfx", "Abi", "Bang fai, abi udah bikin motion grafiknya lhoo!","11:21", 0));
+            dataList.add(new Model.Chat("3",  "asdfx", "Royhan", "Boss, jagal yuk.","19:03", 1));
+            dataList.add(new Model.Chat("4",  "asdfx", "Baehqi", "Dimana mbel, gua udah dijagal.","20:00", 0));
         }
 
         // Use list view with custom adapter @ChatsAdapter

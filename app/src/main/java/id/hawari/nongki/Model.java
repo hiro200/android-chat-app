@@ -8,13 +8,14 @@ public class Model {
      * Chat model
      */
     public static class Chat {
-        String roomId, name, message, time;
+        String roomId, name, message, time, senderId;
         int count;
-        public Chat(String roomId, String name, String message, String time, int count) {
+        public Chat(String roomId, String senderId, String name, String message, String time, int count) {
             this.roomId = roomId;
             this.name = name;
             this.message = message;
             this.time = time;
+            this.senderId = senderId;
             this.count = count;
         }
     }
@@ -26,7 +27,8 @@ public class Model {
         String userId, name, email, bio, image;
         boolean isLoggedIn;
         Date lastSeen, registeredAt;
-        public User(String userId, String name, String email, String bio, String image, boolean isLoggedIn, Date lastSeen, Date registeredAt) {
+        public User(String userId, String name, String email, String bio, String image,
+                    boolean isLoggedIn, Date lastSeen, Date registeredAt) {
             this.userId = userId;
             this.name = name;
             this.email = email;
