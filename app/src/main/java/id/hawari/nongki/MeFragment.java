@@ -27,12 +27,13 @@ public class MeFragment extends Fragment {
      * is a variable for handle event on click for button_logout
      * in here will will show a toast and move to login activity
      */
-    private View.OnClickListener onLogoutButtonClick = new View.OnClickListener() {
+    private View.OnClickListener mOnLogoutButtonClick = new View.OnClickListener() {
         @Override
         public  void onClick(View view) {
             Log.d("Fragment Me", "Logout button clicked!");
             Toast.makeText(getActivity(), "Logout success", Toast.LENGTH_LONG).show();
 
+            // start LoginActivity
             Intent intent = new Intent(getActivity(), LoginActivity.class);
             startActivity(intent);
         }
@@ -53,7 +54,6 @@ public class MeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         final Button button = getActivity().findViewById(R.id.button_logout);
-        button.setOnClickListener(this.onLogoutButtonClick);
-
+        button.setOnClickListener(this.mOnLogoutButtonClick);
     }
 }

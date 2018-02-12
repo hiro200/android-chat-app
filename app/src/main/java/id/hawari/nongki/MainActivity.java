@@ -50,15 +50,15 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(this.onNavigationItemSelectedListener);
 
-        //Manually displaying the first fragment - one time only
+        // Manually displaying the first fragment - one time only
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.frame_layout, ChatsFragment.newInstance());
         transaction.commit();
 
         getSupportActionBar().setTitle(R.string.title_chats);
 
-        //Used to select an item programmatically
-        //bottomNavigationView.getMenu().getItem(2).setChecked(true);
+        // Used to select an item programmatically
+        // bottomNavigationView.getMenu().getItem(2).setChecked(true);
     }
 
 }

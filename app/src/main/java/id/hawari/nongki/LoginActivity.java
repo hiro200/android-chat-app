@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private View.OnClickListener onLoginButtonClick = new View.OnClickListener() {
+    private View.OnClickListener mOnLoginButtonClick = new View.OnClickListener() {
         @Override
         public  void onClick(View view) {
             Toast.makeText(LoginActivity.this, "Login success!", Toast.LENGTH_SHORT).show();
@@ -29,6 +29,6 @@ public class LoginActivity extends AppCompatActivity {
 
         // find button_login set event listener if button clicked call onLoginButtonClick method
         final Button button = findViewById(R.id.button_login);
-        button.setOnClickListener(this.onLoginButtonClick);
+        button.setOnClickListener(this.mOnLoginButtonClick);
     }
 }

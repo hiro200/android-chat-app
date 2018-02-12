@@ -1,9 +1,6 @@
 package id.hawari.nongki;
 
 import android.app.Activity;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.os.AsyncTask;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +8,6 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.io.InputStream;
-import java.net.URL;
 import java.util.ArrayList;
 
 public class ChatsAdapter extends BaseAdapter {
@@ -62,7 +57,7 @@ public class ChatsAdapter extends BaseAdapter {
             textView_count = view.findViewById(R.id.textView_count);
 
             final String imgURL  = "https://www.google.com/images/srpr/logo11w.png";
-            new DownLoadImageTask(imageView).execute(imgURL);
+            new Library.DownLoadImageTask(imageView).execute(imgURL);
 
             textView_name.setText(chat.name);
             textView_message.setText(chat.message);
@@ -80,43 +75,4 @@ public class ChatsAdapter extends BaseAdapter {
         return view;
     }
 
-    /*
-    *
-    * Download image and convert to bitmap
-    **/
-    public class DownLoadImageTask extends AsyncTask<String,Void,Bitmap> {
-        ImageView imageView;
-
-        public DownLoadImageTask(ImageView imageView){
-            this.imageView = imageView;
-        }
-
-        /*
-            doInBackground(Params... params)
-                Override this method to perform a computation on a background thread.
-         */
-        protected Bitmap doInBackground(String...urls){
-            String urlOfImage = urls[0];
-            Bitmap logo = null;
-            try{
-                InputStream is = new URL(urlOfImage).openStream();
-                /*
-                    decodeStream(InputStream is)
-                        Decode an input stream into a bitmap.
-                 */
-                logo = BitmapFactory.decodeStream(is);
-            }catch(Exception e){ // Catch the download exception
-                e.printStackTrace();
-            }
-            return logo;
-        }
-
-        /*
-            onPostExecute(Result result)
-                Runs on the UI thread after doInBackground(Params...).
-         */
-        protected void onPostExecute(Bitmap result){
-            imageView.setImageBitmap(result);
-        }
-    }
 }
